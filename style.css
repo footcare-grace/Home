@@ -356,14 +356,16 @@
     margin-bottom:10px;
   }
   .soon{
-    padding:20px 20px;
+    padding:24px 22px;
     border:1px dashed var(--line);
     color:var(--ink-soft);
     font-size:0.85rem;
+    line-height:1.7;
     display:flex;
     justify-content:space-between;
     align-items:baseline;
     gap:12px;
+    row-gap:10px;
     flex-wrap:wrap;
   }
   .soon .name{
@@ -466,21 +468,27 @@
     border-width:9px 0 0 11px;
     border-color:#6E5333 transparent transparent transparent;
   }
-  .offer-ribbon .offer-label{
-    font-size:0.68rem;
-    letter-spacing:0.14em;
-    color:rgba(255,255,255,0.88);
+  .offer-ribbon .offer-badge{
+    display:inline-block;
+    font-size:0.66rem;
+    letter-spacing:0.1em;
+    color:var(--gold-deep);
+    background:#fff;
+    border-radius:999px;
+    padding:3px 12px;
+    margin-bottom:8px;
   }
   .offer-ribbon .offer-text{
     font-family:"Shippori Mincho", serif;
-    font-size:1.08rem;
+    font-size:1.1rem;
+    font-weight:700;
     color:#fff;
     margin-top:2px;
   }
   .offer-ribbon .offer-sub{
     font-size:0.74rem;
     color:rgba(255,255,255,0.85);
-    margin-top:5px;
+    margin-top:6px;
   }
 
   /* ---------- Process (flow) ---------- */
