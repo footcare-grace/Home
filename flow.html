@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>施術の流れ｜トータルフットケア GRACE</title>
+<meta name="description" content="トータルフットケア GRACEでの施術の流れをご紹介します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav" id="siteNav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html"><img src="logo.png" alt="トータルフットケア GRACE"></a>
+    <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html#menu">料金メニュー</a>
+      <a href="flow.html">施術の流れ</a>
+      <a href="therapist.html">セラピスト紹介</a>
+      <a href="index.html#about">サロンについて</a>
+      <a href="index.html#access">アクセス</a>
+      <a href="index.html#faq">よくある質問</a>
+      <a href="voice.html">お客様の声</a>
+      <a class="nav-cta-mobile btn btn-line" href="https://lin.ee/wuQMf0Z">LINEで予約する</a>
+    </div>
+    <a class="nav-cta btn btn-line" href="index.html#reserve" style="padding:8px 20px; font-size:0.78rem;">LINEで予約</a>
+  </div>
+</nav>
+
+<section class="subpage-hero">
+  <div class="wrap">
+    <div class="en">Flow</div>
+    <div class="jp">施術の流れ</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="subpage-body">
+      <div class="process-grid" style="grid-template-columns:1fr;">
+        <div class="process-item">
+          <div class="num">01</div>
+          <h3>カウンセリング</h3>
+          <p>足のお悩みやご希望をお伺いします。</p>
+        </div>
+        <div class="process-item">
+          <div class="num">02</div>
+          <h3>フットバス</h3>
+          <p>トータルケアのみ、フットバスで足元を清潔に整えます。</p>
+        </div>
+        <div class="process-item">
+          <div class="num">03</div>
+          <h3>施術</h3>
+          <p>お悩みに合わせて丁寧に施術いたします。</p>
+        </div>
+        <div class="process-item" style="border-bottom:none; padding-bottom:0;">
+          <div class="num">04</div>
+          <h3>仕上げ</h3>
+          <p>保湿・コンディショニングで仕上げます。</p>
+        </div>
+      </div>
+      <div class="process-note">
+        オーダーメイドインソールをご注文の方は、足・歩き・靴などの撮影を行います。
+      </div>
+      <div style="text-align:center; margin-top:32px;">
+        <a class="back-link" href="index.html">← トップページに戻る</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img class="footer-logo-img" src="logo.png" alt="トータルフットケア GRACE">
+    <div class="footer-copy">&copy; 2026 トータルフットケア GRACE</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav = document.getElementById('siteNav');
+  var toggle = document.getElementById('navToggle');
+  var links = document.getElementById('navLinks');
+  if(!nav || !toggle || !links) return;
+  toggle.addEventListener('click', function(){
+    var open = nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  links.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+</script>
+</body>
+</html>
