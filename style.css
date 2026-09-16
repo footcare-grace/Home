@@ -451,6 +451,11 @@
     color:#fff;
     margin-top:4px;
   }
+  .offer-banner .offer-sub{
+    font-size:0.78rem;
+    color:rgba(255,255,255,0.85);
+    margin-top:6px;
+  }
 
   /* ---------- Process (flow) ---------- */
   .process-grid{
