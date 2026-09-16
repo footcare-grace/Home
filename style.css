@@ -356,6 +356,7 @@
     margin-bottom:10px;
   }
   .soon{
+    margin-top:24px;
     padding:24px 22px;
     border:1px dashed var(--line);
     color:var(--ink-soft);
