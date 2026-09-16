@@ -427,33 +427,18 @@
   /* ---------- Intro offer ---------- */
   .offer-banner{
     max-width:640px;
-    margin:0 auto;
+    margin:0 auto 40px;
     display:flex;
     flex-wrap:wrap;
     align-items:center;
     justify-content:center;
     gap:16px;
-    text-align:left;
+    text-align:center;
     background:linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
     color:#fff;
     border-radius:10px;
-    padding:22px 28px;
+    padding:20px 28px;
     box-shadow:0 8px 24px rgba(139,106,65,0.25);
-  }
-  .offer-banner .offer-icon{
-    width:44px;
-    height:44px;
-    flex-shrink:0;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:rgba(255,255,255,0.22);
-    border-radius:50%;
-  }
-  .offer-banner .offer-icon svg{
-    width:24px;
-    height:24px;
-    fill:#fff;
   }
   .offer-banner .offer-label{
     font-size:0.7rem;
