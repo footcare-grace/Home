@@ -437,7 +437,7 @@
     flex-wrap:wrap;
     align-items:center;
     justify-content:center;
-    text-align:left;
+    text-align:center;
     gap:14px;
     max-width:560px;
     width:100%;
@@ -465,21 +465,6 @@
     right:0;
     border-width:9px 0 0 11px;
     border-color:#6E5333 transparent transparent transparent;
-  }
-  .offer-ribbon .offer-icon{
-    width:34px;
-    height:34px;
-    flex-shrink:0;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:rgba(255,255,255,0.24);
-    border-radius:50%;
-  }
-  .offer-ribbon .offer-icon svg{
-    width:19px;
-    height:19px;
-    fill:#fff;
   }
   .offer-ribbon .offer-label{
     font-size:0.68rem;
