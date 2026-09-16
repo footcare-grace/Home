@@ -467,6 +467,42 @@
     border-left:2px solid var(--gold);
   }
 
+  /* ---------- FAQ ---------- */
+  .faq-list{
+    max-width:720px;
+  }
+  .faq-item{
+    padding:22px 0;
+    border-bottom:1px solid var(--line-soft);
+  }
+  .faq-item:first-child{ padding-top:0; }
+  .faq-item:last-child{ border-bottom:none; }
+  .faq-q{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    font-family:"Shippori Mincho", serif;
+    font-size:1.02rem;
+    color:var(--ink);
+  }
+  .faq-q .mark{
+    color:var(--gold-deep);
+    font-family:"Shippori Mincho", serif;
+    flex-shrink:0;
+  }
+  .faq-a{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    margin-top:12px;
+    font-size:0.88rem;
+    color:var(--ink-soft);
+  }
+  .faq-a .mark{
+    color:var(--gold);
+    flex-shrink:0;
+  }
+
   /* ---------- Reserve ---------- */
   .reserve{
     text-align:center;
@@ -578,6 +614,7 @@
       <a href="#menu">料金メニュー</a>
       <a href="#about">サロンについて</a>
       <a href="#access">アクセス</a>
+      <a href="#faq">よくある質問</a>
       <a class="nav-cta-mobile btn btn-line" href="https://lin.ee/wuQMf0Z">LINEで予約する</a>
     </div>
     <a class="nav-cta btn btn-line" href="#reserve" style="padding:8px 20px; font-size:0.78rem;">LINEで予約</a>
@@ -806,6 +843,31 @@
           <span class="k">駐車場</span>
           <span class="v">駐車場完備</span>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="en">FAQ</div>
+      <div class="jp">よくある質問</div>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q"><span class="mark">Q</span><span>注意事項はありますか？</span></div>
+        <div class="faq-a"><span class="mark">A</span><span>爪や足に炎症がある、もしくは感染症が疑われる場合、糖尿病、循環器疾患、人工透析などで内服治療中の方は施術をお断りすることがございます。ご予約の際にご相談ください。</span></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="mark">Q</span><span>駐車場はありますか？</span></div>
+        <div class="faq-a"><span class="mark">A</span><span>無料の駐車場を完備しております。場所はご予約確定後にお知らせいたします。</span></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="mark">Q</span><span>男性は利用できますか？</span></div>
+        <div class="faq-a"><span class="mark">A</span><span>原則女性のみ施術を承っておりますが、ご家族やご紹介での施術は承りますのでご相談ください。</span></div>
       </div>
     </div>
   </div>
