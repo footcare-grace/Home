@@ -435,6 +435,132 @@
     margin:0;
   }
 
+  /* ---------- Intro offer ---------- */
+  .offer-banner{
+    max-width:720px;
+    margin:0 auto;
+    text-align:center;
+    border:1px solid var(--gold);
+    background:linear-gradient(180deg, rgba(169,130,90,0.08), transparent);
+    padding:22px 24px;
+  }
+  .offer-banner .offer-label{
+    font-size:0.72rem;
+    letter-spacing:0.14em;
+    color:var(--gold-deep);
+  }
+  .offer-banner .offer-text{
+    font-family:"Shippori Mincho", serif;
+    font-size:1.15rem;
+    margin-top:8px;
+  }
+
+  /* ---------- Process (flow) ---------- */
+  .process-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:26px;
+  }
+  .process-item{
+    text-align:left;
+    padding-bottom:22px;
+    border-bottom:1px solid var(--line-soft);
+  }
+  .process-item:last-child{ border-bottom:none; padding-bottom:0; }
+  .process-item .num{
+    font-family:"Shippori Mincho", serif;
+    color:var(--gold);
+    font-size:0.8rem;
+    letter-spacing:0.1em;
+    margin-bottom:8px;
+  }
+  .process-item h3{
+    font-size:1.02rem;
+    margin-bottom:6px;
+  }
+  .process-item p{
+    font-size:0.85rem;
+    color:var(--ink-soft);
+    margin:0;
+  }
+  .process-note{
+    margin-top:8px;
+    font-size:0.78rem;
+    color:var(--ink-soft);
+    background:var(--cream);
+    padding:14px 16px;
+    border-left:2px solid var(--gold);
+  }
+
+  /* ---------- Therapist ---------- */
+  .therapist-card{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:24px;
+    align-items:center;
+    max-width:720px;
+    margin:0 auto;
+  }
+  .therapist-photo{
+    width:100%;
+    max-width:280px;
+    margin:0 auto;
+    aspect-ratio:2/3;
+    object-fit:cover;
+    border-radius:4px;
+  }
+  .therapist-info{
+    text-align:center;
+  }
+  .therapist-role{
+    font-size:0.78rem;
+    letter-spacing:0.08em;
+    color:var(--gold-deep);
+    margin-bottom:6px;
+  }
+  .therapist-info h3{
+    font-size:1.15rem;
+    margin-bottom:12px;
+  }
+  .therapist-info p{
+    font-size:0.88rem;
+    color:var(--ink-soft);
+    margin:0;
+  }
+
+  /* ---------- Voice ---------- */
+  .voice-note{
+    max-width:560px;
+    margin:0 auto;
+    text-align:center;
+    padding:28px 24px;
+    border:1px dashed var(--line);
+  }
+  .voice-note p{
+    font-size:0.88rem;
+    color:var(--ink-soft);
+    margin:8px 0 0;
+  }
+
+  /* ---------- Cancel policy ---------- */
+  .policy-note{
+    max-width:960px;
+    margin:28px auto 0;
+    font-size:0.82rem;
+    color:var(--ink-soft);
+    background:var(--paper);
+    border:1px solid var(--line-soft);
+    padding:22px 24px;
+  }
+  .policy-note h4{
+    font-family:"Shippori Mincho", serif;
+    font-size:0.98rem;
+    color:var(--ink);
+    margin:0 0 10px;
+  }
+  .policy-note p{ margin:0 0 8px; }
+  .policy-note p:last-child{ margin-bottom:0; }
+
   /* ---------- Access ---------- */
   .access-card{
     background:var(--paper);
@@ -576,6 +702,10 @@
     .hero-panel{ padding:44px 24px 48px; }
     .hero-logo{ width:230px; }
     .about-grid{ grid-template-columns:repeat(3,1fr); }
+    .process-grid{ grid-template-columns:repeat(4,1fr); gap:20px; }
+    .process-item{ border-bottom:none; padding-bottom:0; }
+    .therapist-card{ grid-template-columns:220px 1fr; text-align:left; }
+    .therapist-info{ text-align:left; }
     .menu-item{ grid-template-columns:1fr; }
   }
 
@@ -606,6 +736,8 @@
     </button>
     <div class="nav-links" id="navLinks">
       <a href="#menu">料金メニュー</a>
+      <a href="#flow">施術の流れ</a>
+      <a href="#therapist">セラピスト紹介</a>
       <a href="#about">サロンについて</a>
       <a href="#access">アクセス</a>
       <a href="#faq">よくある質問</a>
@@ -668,6 +800,68 @@
         <div class="num">03</div>
         <h3>オーダーメイドインソール</h3>
         <p>体や足のお悩み・目的に合わせてインソールを選定します。歩きから作られる、あなただけのオーダーメイドインソールをご提供いたします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="offer" style="padding:0 0 56px;">
+  <div class="wrap">
+    <div class="offer-banner">
+      <div class="offer-label">初回限定特典</div>
+      <div class="offer-text">シューフィッティング（足の計測）無料</div>
+    </div>
+  </div>
+</section>
+
+<section id="flow">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="en">Flow</div>
+      <div class="jp">施術の流れ</div>
+      <div class="section-divider"></div>
+    </div>
+    <div class="process-grid">
+      <div class="process-item">
+        <div class="num">01</div>
+        <h3>カウンセリング</h3>
+        <p>足のお悩みやご希望をお伺いします。</p>
+      </div>
+      <div class="process-item">
+        <div class="num">02</div>
+        <h3>フットバス</h3>
+        <p>トータルケアのみ、フットバスで足元を清潔に整えます。</p>
+      </div>
+      <div class="process-item">
+        <div class="num">03</div>
+        <h3>施術</h3>
+        <p>お悩みに合わせて丁寧に施術いたします。</p>
+      </div>
+      <div class="process-item">
+        <div class="num">04</div>
+        <h3>仕上げ</h3>
+        <p>保湿・コンディショニングで仕上げます。</p>
+      </div>
+    </div>
+    <div class="process-note">
+      オーダーメイドインソールをご注文の方は、足・歩き・靴などの撮影を行います。
+    </div>
+  </div>
+</section>
+
+<section id="therapist" style="background:var(--paper); border-top:1px solid var(--line-soft); border-bottom:1px solid var(--line-soft);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="en">Therapist</div>
+      <div class="jp">セラピスト紹介</div>
+      <div class="section-divider"></div>
+    </div>
+    <div class="therapist-card">
+      <img class="therapist-photo" src="therapist.jpg" alt="セラピストの写真">
+      <div class="therapist-info">
+        <div class="therapist-role">理学療法士 / 医療フットケア技術者</div>
+        <h3>足のプロとして、根本からのケアを</h3>
+        <p>理学療法士としての知識と医療フットケアの技術を組み合わせ、症状だけでなく歩き方や姿勢まで見た上で、再発しにくい足元へ導くケアをご提供しています。おひとりおひとりのお悩みに丁寧に向き合いますので、どうぞお気軽にご相談ください。</p>
       </div>
     </div>
   </div>
@@ -839,6 +1033,27 @@
         </div>
       </div>
     </div>
+
+    <div class="policy-note">
+      <h4>キャンセルポリシー</h4>
+      <p>ご予約の変更・キャンセルは、施術前日の20:00までに公式LINEにてご連絡ください。</p>
+      <p>前日20:00以降のご変更・キャンセルは施術料金の50%、当日キャンセル・無断キャンセルの場合は100%を、キャンセル料として頂戴する場合がございます。</p>
+      <p>体調不良など、やむを得ない事情がある場合はご遠慮なくご相談ください。</p>
+    </div>
+  </div>
+</section>
+
+<section id="voice">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="en">Voice</div>
+      <div class="jp">お客様の声</div>
+      <div class="section-divider"></div>
+    </div>
+    <div class="voice-note">
+      <span class="badge" style="margin-bottom:0;">準備中</span>
+      <p>施術のビフォーアフターは、公式Instagramにて随時ご紹介しています。<br>お客様の声も近日公開予定です。</p>
+    </div>
   </div>
 </section>
 
@@ -862,6 +1077,14 @@
       <div class="faq-item">
         <div class="faq-q"><span class="mark">Q</span><span>男性は利用できますか？</span></div>
         <div class="faq-a"><span class="mark">A</span><span>原則女性のみ施術を承っておりますが、ご家族やご紹介での施術は承りますのでご相談ください。</span></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="mark">Q</span><span>施術時間の目安はどれくらいですか？</span></div>
+        <div class="faq-a"><span class="mark">A</span><span>初回施術は目安の時間より長くなる場合がございます。お時間に余裕を持ってお越しください。退店時間のご希望があれば事前にお伝えください。</span></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="mark">Q</span><span>痛みはありますか？</span></div>
+        <div class="faq-a"><span class="mark">A</span><span>痛みは生じないことがほとんどです。丁寧な施術を心がけますが、稀にフレーザー（削る器具）の摩擦による摩擦熱を感じることがありますので、遠慮なくお申し付けください。</span></div>
       </div>
     </div>
   </div>
