@@ -49,37 +49,83 @@
     position:sticky;
     top:0;
     z-index:50;
-    background:rgba(250,246,238,0.92);
+    background:rgba(250,246,238,0.94);
     backdrop-filter:blur(6px);
     border-bottom:1px solid var(--line-soft);
   }
   .nav-inner{
     max-width:1080px;
     margin:0 auto;
-    padding:14px 24px;
+    padding:14px 20px;
     display:flex;
     align-items:center;
     justify-content:space-between;
+    position:relative;
   }
   .nav-brand{
     font-family:"Shippori Mincho", serif;
     font-size:1.05rem;
     letter-spacing:0.12em;
     color:var(--ink);
+    flex-shrink:0;
   }
-  .nav-links{
+  .nav-toggle{
     display:flex;
-    gap:22px;
-    font-size:0.85rem;
-    letter-spacing:0.05em;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-end;
+    gap:5px;
+    width:30px;
+    height:30px;
+    background:none;
+    border:none;
+    padding:0;
+    cursor:pointer;
   }
+  .nav-toggle span{
+    display:block;
+    height:1px;
+    background:var(--ink);
+    transition:all .25s ease;
+  }
+  .nav-toggle span:nth-child(1){ width:22px; }
+  .nav-toggle span:nth-child(2){ width:16px; }
+  .nav-toggle span:nth-child(3){ width:22px; }
+  .nav.is-open .nav-toggle span:nth-child(1){ transform:translateY(6px) rotate(45deg); width:22px; }
+  .nav.is-open .nav-toggle span:nth-child(2){ opacity:0; }
+  .nav.is-open .nav-toggle span:nth-child(3){ transform:translateY(-6px) rotate(-45deg); width:22px; }
+
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    background:var(--cream);
+    border-bottom:1px solid var(--line-soft);
+    flex-direction:column;
+    padding:8px 20px 20px;
+    gap:2px;
+  }
+  .nav.is-open .nav-links{ display:flex; }
   .nav-links a{
-    padding:6px 2px;
-    border-bottom:1px solid transparent;
-    transition:border-color .2s ease, color .2s ease;
+    padding:12px 2px;
+    border-bottom:1px solid var(--line-soft);
+    font-size:0.92rem;
+    letter-spacing:0.05em;
+    transition:color .2s ease;
   }
-  .nav-links a:hover{ border-color:var(--gold); color:var(--gold-deep); }
+  .nav-links a:last-child{ border-bottom:none; }
+  .nav-links a:hover{ color:var(--gold-deep); }
+  .nav-links .nav-cta-mobile{
+    margin-top:12px;
+    text-align:center;
+    border:none;
+  }
   .nav-cta{
+    display:none;
+  }
+  .nav-cta.btn{
     display:none;
   }
 
@@ -113,8 +159,8 @@
     position:absolute;
     inset:0;
     background:
-      radial-gradient(circle at 50% 42%, rgba(255,255,255,0.94) 0%, rgba(255,255,255,0.78) 30%, rgba(255,255,255,0.35) 55%, rgba(255,255,255,0.1) 75%),
-      linear-gradient(180deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 60%, var(--paper) 100%);
+      radial-gradient(circle at 50% 42%, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0.56) 30%, rgba(255,255,255,0.22) 55%, rgba(255,255,255,0.05) 75%),
+      linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.05) 60%, var(--paper) 100%);
     pointer-events:none;
   }
   .hero-overlay-content{
@@ -135,12 +181,14 @@
   .hero-logo{
     width:200px;
     margin:0 auto 14px;
+    filter:drop-shadow(0 1px 10px rgba(255,255,255,0.85)) drop-shadow(0 0 2px rgba(255,255,255,0.9));
   }
   .hero-tagline{
     font-family:"Shippori Mincho", serif;
     font-size:1.05rem;
     color:var(--ink-soft);
     letter-spacing:0.14em;
+    text-shadow:0 1px 10px rgba(255,255,255,0.8), 0 0 3px rgba(255,255,255,0.9);
   }
   .hero-lede{
     max-width:520px;
@@ -471,7 +519,23 @@
 
   /* ---------- Tablet ---------- */
   @media (min-width:700px){
-    .nav-links{ font-size:0.9rem; gap:30px; }
+    .nav-toggle{ display:none; }
+    .nav-links{
+      display:flex;
+      position:static;
+      flex-direction:row;
+      background:none;
+      border-bottom:none;
+      padding:0;
+      gap:26px;
+      font-size:0.88rem;
+    }
+    .nav-links a{
+      padding:6px 2px;
+      border-bottom:1px solid transparent;
+    }
+    .nav-links a:hover{ border-color:var(--gold); }
+    .nav-links .nav-cta-mobile{ display:none; }
     .hero-slideshow{ height:62vh; }
     .hero-panel{ padding:44px 24px 48px; }
     .hero-logo{ width:230px; }
@@ -481,7 +545,7 @@
 
   /* ---------- Desktop ---------- */
   @media (min-width:960px){
-    .nav-cta{ display:inline-block; }
+    .nav-cta.btn{ display:inline-block; }
     .hero-slideshow{ height:68vh; max-height:620px; }
     .hero-panel{ padding:36px 24px 56px; }
     .hero-logo{ width:260px; }
@@ -498,13 +562,17 @@
 </head>
 <body>
 
-<nav class="nav">
+<nav class="nav" id="siteNav">
   <div class="nav-inner">
     <a class="nav-brand" href="#top">GRACE</a>
-    <div class="nav-links">
+    <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
       <a href="#menu">料金メニュー</a>
       <a href="#about">サロンについて</a>
       <a href="#access">アクセス</a>
+      <a class="nav-cta-mobile btn btn-line" href="https://lin.ee/wuQMf0Z">LINEで予約する</a>
     </div>
     <a class="nav-cta btn btn-line" href="#reserve" style="padding:8px 20px; font-size:0.78rem;">LINEで予約</a>
   </div>
@@ -783,6 +851,22 @@
     current = (current + 1) % slides.length;
     slides[current].classList.add('is-active');
   }, 2600);
+})();
+(function(){
+  var nav = document.getElementById('siteNav');
+  var toggle = document.getElementById('navToggle');
+  var links = document.getElementById('navLinks');
+  if(!nav || !toggle || !links) return;
+  toggle.addEventListener('click', function(){
+    var open = nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  links.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
 })();
 </script>
 </body>
