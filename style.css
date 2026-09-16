@@ -515,11 +515,11 @@
   }
   .therapist-photo{
     width:100%;
-    max-width:220px;
-    aspect-ratio:1/1;
+    max-width:260px;
+    aspect-ratio:3/4;
     margin:0 auto;
     object-fit:cover;
-    border-radius:50%;
+    border-radius:8px;
   }
   .therapist-info{
     text-align:center;
@@ -551,10 +551,10 @@
     margin:0 auto;
   }
   .therapist-teaser-photo{
-    width:120px;
-    height:120px;
+    width:96px;
+    height:128px;
     object-fit:cover;
-    border-radius:50%;
+    border-radius:8px;
     flex-shrink:0;
   }
   .therapist-teaser-text p{
