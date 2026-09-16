@@ -9,6 +9,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+  /* This page is always a vertical timeline, even on wide screens */
+  .process-grid{ flex-direction:column !important; }
+  .process-grid::before{ left:21px !important; right:auto !important; top:22px !important; bottom:22px !important; width:1px !important; height:auto !important; }
+  .process-item{ flex-direction:row !important; align-items:flex-start !important; text-align:left !important; padding:0 0 32px 0 !important; }
+  .process-item:last-child{ padding-bottom:0 !important; }
+  .process-item .process-body{ padding-top:8px !important; }
+</style>
 </head>
 <body>
 
@@ -42,26 +50,34 @@
 <section>
   <div class="wrap">
     <div class="subpage-body">
-      <div class="process-grid" style="grid-template-columns:1fr;">
+      <div class="process-grid" style="flex-direction:column;">
         <div class="process-item">
           <div class="num">01</div>
-          <h3>カウンセリング</h3>
-          <p>足のお悩みやご希望をお伺いします。</p>
+          <div class="process-body">
+            <h3>カウンセリング</h3>
+            <p>足のお悩みやご希望をお伺いします。</p>
+          </div>
         </div>
         <div class="process-item">
           <div class="num">02</div>
-          <h3>フットバス</h3>
-          <p>トータルケアのみ、フットバスで足元を清潔に整えます。</p>
+          <div class="process-body">
+            <h3>フットバス</h3>
+            <p>トータルケアのみ、フットバスで足元を清潔に整えます。</p>
+          </div>
         </div>
         <div class="process-item">
           <div class="num">03</div>
-          <h3>施術</h3>
-          <p>お悩みに合わせて丁寧に施術いたします。</p>
+          <div class="process-body">
+            <h3>施術</h3>
+            <p>お悩みに合わせて丁寧に施術いたします。</p>
+          </div>
         </div>
-        <div class="process-item" style="border-bottom:none; padding-bottom:0;">
+        <div class="process-item">
           <div class="num">04</div>
-          <h3>仕上げ</h3>
-          <p>保湿・コンディショニングで仕上げます。</p>
+          <div class="process-body">
+            <h3>仕上げ</h3>
+            <p>保湿・コンディショニングで仕上げます。</p>
+          </div>
         </div>
       </div>
       <div class="process-note">
