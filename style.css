@@ -424,37 +424,78 @@
     margin:0;
   }
 
-  /* ---------- Intro offer ---------- */
-  .offer-banner{
-    max-width:640px;
-    margin:0 auto 40px;
+  /* ---------- Intro offer (ribbon) ---------- */
+  .offer-wrap{
     display:flex;
+    justify-content:center;
+    margin:0 0 44px;
+    padding-top:10px;
+  }
+  .offer-ribbon{
+    position:relative;
+    display:inline-flex;
     flex-wrap:wrap;
     align-items:center;
     justify-content:center;
-    gap:16px;
-    text-align:center;
+    text-align:left;
+    gap:14px;
+    max-width:560px;
+    width:100%;
+    box-sizing:border-box;
+    padding:16px 30px;
     background:linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
     color:#fff;
-    border-radius:10px;
-    padding:20px 28px;
-    box-shadow:0 8px 24px rgba(139,106,65,0.25);
+    box-shadow:0 10px 22px rgba(139,106,65,0.3);
   }
-  .offer-banner .offer-label{
-    font-size:0.7rem;
+  .offer-ribbon::before,
+  .offer-ribbon::after{
+    content:"";
+    position:absolute;
+    bottom:-9px;
+    width:0;
+    height:0;
+    border-style:solid;
+  }
+  .offer-ribbon::before{
+    left:0;
+    border-width:9px 11px 0 0;
+    border-color:#6E5333 transparent transparent transparent;
+  }
+  .offer-ribbon::after{
+    right:0;
+    border-width:9px 0 0 11px;
+    border-color:#6E5333 transparent transparent transparent;
+  }
+  .offer-ribbon .offer-icon{
+    width:34px;
+    height:34px;
+    flex-shrink:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(255,255,255,0.24);
+    border-radius:50%;
+  }
+  .offer-ribbon .offer-icon svg{
+    width:19px;
+    height:19px;
+    fill:#fff;
+  }
+  .offer-ribbon .offer-label{
+    font-size:0.68rem;
     letter-spacing:0.14em;
     color:rgba(255,255,255,0.88);
   }
-  .offer-banner .offer-text{
+  .offer-ribbon .offer-text{
     font-family:"Shippori Mincho", serif;
-    font-size:1.15rem;
+    font-size:1.08rem;
     color:#fff;
-    margin-top:4px;
+    margin-top:2px;
   }
-  .offer-banner .offer-sub{
-    font-size:0.78rem;
+  .offer-ribbon .offer-sub{
+    font-size:0.74rem;
     color:rgba(255,255,255,0.85);
-    margin-top:6px;
+    margin-top:5px;
   }
 
   /* ---------- Process (flow) ---------- */
