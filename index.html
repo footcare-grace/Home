@@ -63,11 +63,14 @@
     position:relative;
   }
   .nav-brand{
-    font-family:"Shippori Mincho", serif;
-    font-size:1.05rem;
-    letter-spacing:0.12em;
-    color:var(--ink);
+    display:flex;
+    align-items:center;
     flex-shrink:0;
+  }
+  .nav-brand img{
+    height:16px;
+    width:auto;
+    display:block;
   }
   .nav-toggle{
     display:flex;
@@ -353,13 +356,15 @@
   }
   .badge{
     display:inline-block;
-    font-size:0.68rem;
-    letter-spacing:0.1em;
-    color:var(--gold-deep);
-    border:1px solid var(--gold);
-    border-radius:999px;
-    padding:2px 12px;
-    margin-bottom:8px;
+    width:fit-content;
+    font-size:0.7rem;
+    letter-spacing:0.06em;
+    color:#fff;
+    background:var(--gold-deep);
+    border:none;
+    border-radius:3px;
+    padding:4px 10px;
+    margin-bottom:10px;
   }
   .soon{
     padding:20px 20px;
@@ -520,6 +525,7 @@
   /* ---------- Tablet ---------- */
   @media (min-width:700px){
     .nav-toggle{ display:none; }
+    .nav-brand img{ height:18px; }
     .nav-links{
       display:flex;
       position:static;
@@ -564,7 +570,7 @@
 
 <nav class="nav" id="siteNav">
   <div class="nav-inner">
-    <a class="nav-brand" href="#top">GRACE</a>
+    <a class="nav-brand" href="#top"><img src="logo-mark.png" alt="GRACE"></a>
     <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -630,7 +636,7 @@
       <div class="about-item">
         <div class="num">03</div>
         <h3>オーダーメイドインソール</h3>
-        <p>歩き方や目的に合わせてお作りするオーダーメイドインソールで、足元から歩行をサポートします。</p>
+        <p>体や足のお悩み・目的に合わせてインソールを選定します。歩きから作られる、あなただけのオーダーメイドインソールです。</p>
       </div>
     </div>
   </div>
@@ -676,16 +682,17 @@
           </div>
         </div>
 
-        <div class="menu-item" style="margin-bottom:14px;">
+        <div class="menu-item">
           <div class="menu-item-top">
-            <span class="menu-item-name">巻き爪補正</span>
+            <span class="menu-item-name">タコ・ウオノメコース</span>
+            <span class="menu-item-time">45〜60分</span>
           </div>
-          <p class="menu-item-desc">食い込み・痛みを伴う巻き爪に。無理なく形を整えていきます。</p>
+          <p class="menu-item-desc">角質トラブルのポイントケア。施術箇所により時間・価格が変動します。</p>
           <div class="menu-item-price-block">
-            <span class="price-label">モニター価格</span>
-            <span class="menu-item-price"><small>¥</small>2,000</span>
+            <span class="menu-item-price"><small>¥</small>4,000〜6,000</span>
           </div>
         </div>
+
         <div class="soon">
           <span class="name">歩きが変わる膝下コンディショニング</span>
           <span>近日公開予定</span>
@@ -698,12 +705,12 @@
 
         <div class="menu-item">
           <div class="menu-item-top">
-            <span class="menu-item-name">タコ・ウオノメ集中ケア</span>
-            <span class="menu-item-time">45〜60分</span>
+            <span class="menu-item-name">巻き爪補正</span>
           </div>
-          <p class="menu-item-desc">角質トラブルのポイントケア。施術箇所により時間・価格が変動します。</p>
+          <p class="menu-item-desc">食い込み・痛みを伴う巻き爪に。無理なく形を整えていきます。</p>
           <div class="menu-item-price-block">
-            <span class="menu-item-price"><small>¥</small>4,000〜6,000</span>
+            <span class="price-label">モニター価格</span>
+            <span class="menu-item-price"><small>¥</small>2,000</span>
           </div>
         </div>
 
@@ -713,17 +720,13 @@
             <span class="menu-item-time">30〜45分</span>
           </div>
           <p class="menu-item-desc">小指の端の痛いトゲにお悩みの方へ。再発させにくいキューティクルケアです。</p>
-          <div class="price-range-row">
-            <span class="label">1趾</span>
-            <span class="val-block">
-              <span class="val">¥1,500</span>
-            </span>
+          <div class="menu-item-price-row">
+            <span class="menu-item-sub">1趾</span>
+            <span class="menu-item-price"><small>¥</small>1,500</span>
           </div>
-          <div class="price-range-row">
-            <span class="label">両足</span>
-            <span class="val-block">
-              <span class="val">¥2,000</span>
-            </span>
+          <div class="menu-item-price-row">
+            <span class="menu-item-sub">両足</span>
+            <span class="menu-item-price"><small>¥</small>2,000</span>
           </div>
         </div>
 
